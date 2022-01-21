@@ -1,5 +1,10 @@
 <template>
-    <button class="btn btn-primary" @click="share">Share on Facebook</button>
+    <div>
+        <h3>Share {{ article.title }} with your friends</h3>
+        <button class="btn btn-primary" @click="share('Facebook')">Share on Facebook</button> &nbsp;
+        <button class="btn btn-primary" @click="share('Twitter')">Share on Twitter</button>
+
+    </div>
 </template>
 
 <script>
@@ -7,14 +12,20 @@ import { eventBus } from '../main';
 
 export default {
     methods: {
-        share() {
+        share(media) {
             eventBus.$emit('articleWasShared', {
-                media: 'Facebook'
+                article: this.article,
+                media: media
             });
-            
             this.$emit('articleWasShared', {
-                media: 'Facebook'
+                media: media
             });
+        }
+    },
+    props: {
+        article: {
+            type: Object,
+            required: true
         }
     }
 }

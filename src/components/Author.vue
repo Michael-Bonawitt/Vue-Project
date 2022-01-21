@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import { eventBus } from '../main';
 
 export default {
     props: {
@@ -12,10 +11,6 @@ export default {
             required: true
         }
     },
-    created() {
-        eventBus.$on('articleWasShared', (data) => {
-            alert("Someone shared an article on " + data.media + "!");
-        });
-    }
+    
 }
 </script>

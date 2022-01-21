@@ -7,7 +7,7 @@
         <app-author :author="author"></app-author>
 
         <br><br>
-        <app-social-sharing @articleWasShared="shared('Hello!', $event)"></app-social-sharing>
+        <app-social-sharing :article="$data" @articleWasShared="shared('Hello!', $event)"></app-social-sharing>
     </div>
 </template>
 
@@ -35,10 +35,8 @@ export default {
         }
     },
     methods: {
-        shared: function(message, event) {
-            this.shares++,
-            console.log(message)
-            console.log(event)
+        shared: function() {
+            this.shares++
         }
     },
     components: {
