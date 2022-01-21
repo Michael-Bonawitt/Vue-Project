@@ -1,16 +1,21 @@
 <template>
-    <small>{{ author.firstName }} {{ author.lastName }}</small>
+    <small>Written by {{ author.firstName }} {{ author.lastName }}</small>
 </template>
 
 <script>
+import { eventBus } from '../main';
+
 export default {
-    data() {
-        return {
-            author: {
-                firstName: 'Mike',
-                lastName: 'Bonawitt'
-            }
+    props: {
+        author: {
+            type: Object,
+            required: true
         }
+    },
+    created() {
+        eventBus.$on('articleWasShared', (data) => {
+            alert("Someone shared an article on " + data.media + "!");
+        });
     }
 }
 </script>
