@@ -2,7 +2,7 @@
     <div>
         <h3>Share {{ article.title }} with your friends</h3>
         <button class="btn btn-primary" @click="share('Facebook')">Share on Facebook</button> &nbsp;
-        <button class="btn btn-primary" @click="share('Twitter')">Share on Twitter</button>
+        <button class="btn btn-primary" @click="share('Twitter')">Share on Twitter</button><br><br>
 
     </div>
 </template>

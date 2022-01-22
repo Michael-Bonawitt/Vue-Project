@@ -3,7 +3,12 @@
     <div class="row">
       <div class="col-xs-12"></div>
         <announcement></announcement>
-        <app-article></app-article>
+        <app-article>
+        </app-article>
+        <hr>
+        <app-contact>
+          <p>Please do not submit any sensitive information!</p>
+        </app-contact>
     </div>
   </div>
 </template>
