@@ -7,7 +7,8 @@
         </app-article>
         <hr>
         <app-contact>
-          <p>Please do not submit any sensitive information!</p>
+          <p slot="top">Contact us and one of our reprsentatives will get back to you as soon as possible</p>
+          <p slot="bottom">Please do not submit any sensitive information!</p>
         </app-contact>
     </div>
   </div>
