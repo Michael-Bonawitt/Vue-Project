@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
-import bootstrap from 'bootstrap/dist/css/bootstrap.css'
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 import Announcement from './components/Announcement.vue'
 import Article from './components/Article.vue'
 import Contact from './components/Contact.vue'
 
-Vue.use(bootstrap);
+Vue.use(Bootstrap);
 
 export const eventBus = new Vue();
 
